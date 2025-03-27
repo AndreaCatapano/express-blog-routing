@@ -5,7 +5,17 @@ const router = express.Router();
 
 
 router.get("/", function(req, res) {
-    res.send("Lista delle pizze")
+    res.send("Lista dei post")
+})
+
+
+router.get("/:id", function(req, res) {
+    const id = req.params.id;
+    res.send(`Post scelto ${id}`);
+})
+
+router.post("/", function(req, res) {
+    res.send("Nuovo Post")
 })
 
 
