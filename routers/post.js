@@ -1,11 +1,11 @@
 const express = require("express");
 const router = express.Router();
-//const posts = require("./data/posts.js");
+const posts = require("../data/posts.js");
 
-
+router.use(express.static('../public'))
 
 router.get("/", function(req, res) {
-    res.send("Lista dei post")
+    res.json(posts);
 })
 
 
