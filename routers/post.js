@@ -8,7 +8,11 @@ router.get("/", function(req, res) {
 
 router.get("/:id", function(req, res) {
     const id = req.params.id;
-    res.send(`Post scelto ${id}`);
+    const post = posts.find(post => post.slug === id); 
+
+    if(post){
+        res.json(post);
+    }
 })
 
 router.post("/", function(req, res) {
