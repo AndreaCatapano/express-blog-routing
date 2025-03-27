@@ -1,3 +1,6 @@
-const posts = require("./data/posts");
+const express = require("express");
+const app = express();
+const port = 3001;
 
-console.log(posts)
+
+app.listen(port, function (){ console.log("Server On")});
